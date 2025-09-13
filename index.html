@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Launcher</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #222;
+    }
+    button {
+      padding: 20px 40px;
+      font-size: 1.2em;
+      background: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #1976D2;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openGame()">Play Game 1 🎮</button>
+  <script>
+    function openGame() {
+      var gameUrl = "https://gamesnacks.com/games/2tm5ud1ghg66o";
+      var win = window.open("about:blank", "_blank");
+      win.document.write(`
+        <html>
+          <head><title>Game 1</title></head>
+          <body style="margin:0;overflow:hidden">
+            <iframe src="${gameUrl}" frameborder="0" style="width:100vw;height:100vh;border:0;"></iframe>
+          </body>
+        </html>
+      `);
+    }
+  </script>
+</body>
+</html>
